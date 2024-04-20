@@ -3,7 +3,15 @@
 @tailwind utilities;
 
 @layer base {
-  :root {}
+  :root {
+  }
 
-  .dark {}
+  .dark {
+  }
+}
+
+@layer components {
+  button {
+    @apply rounded-md border;
+  }
 }
