@@ -1,9 +1,12 @@
 import { auth } from 'config/firebase.config';
 import { GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
+import { useUser } from 'hooks/user/useUser';
 import React, { useCallback } from 'react';
 
 export const Authentication = () => {
   const googleProvider = new GoogleAuthProvider();
+
+const {data} = useUser();
 
   const handleLoginAction = useCallback(async () => {
     try {
