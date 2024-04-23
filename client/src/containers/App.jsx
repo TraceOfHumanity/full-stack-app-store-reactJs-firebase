@@ -10,6 +10,8 @@ import { Home } from 'pages/Home';
 import { UserProfile } from 'pages/UserProfile';
 import { AdminHome } from 'pages/admin/AdminHome';
 import { ReactQueryDevtools } from 'react-query/devtools';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 // import { NewUser } from 'pages/admin/NewUser';
 
 export function App() {
@@ -17,6 +19,8 @@ export function App() {
 
   return (
     <QueryClientProvider client={queryClient}>
+      <ToastContainer position='top-right' theme='dark' autoClose={5000} />
+
       <Suspense fallback={<div>Loading...</div>}>
         <Routes>
           <Route element={<Layout />}>
